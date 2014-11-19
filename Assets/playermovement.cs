@@ -64,6 +64,9 @@ public class playermovement : MonoBehaviour {
 			count = count + 1;
 			scoreText.text = "Score: " + count.ToString();
 		}
+		if(other.gameObject.tag == "Exit"){
+			Application.LoadLevel("gameover");
+		}
 	}
 	void OnCollisionEnter2D (Collision2D hit)
 	{
